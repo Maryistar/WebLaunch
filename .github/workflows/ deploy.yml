@@ -42,6 +42,6 @@ jobs:
       - name: Publicar en GitHub Pages
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist  # Asegúrate de que esta ruta contiene los archivos a subir
+          path: ./deploy.yml # Asegúrate de que esta ruta contiene los archivos a subir
       
       
