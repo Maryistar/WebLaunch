@@ -17,11 +17,12 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v3
 
-      - name: Validar HTML
-        uses: chrisguttandin/html-validator-action@v1.0.0
-        with:
-          file: index.html
+      - name: Instalar HTMLHint
+        run: npm install -g htmlhint
 
+      - name: Validar HTML
+        run: htmlhint index.html
+        
   deploy:
     needs: validate-html
     runs-on: ubuntu-latest
