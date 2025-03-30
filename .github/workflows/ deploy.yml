@@ -32,6 +32,12 @@ jobs:
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v3
+        
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+            name: my-artifact
+            path: path/to/artifact
 
       - name: Publicar en GitHub Pages
         uses: actions/upload-pages-artifact@v2
